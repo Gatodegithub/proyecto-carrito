@@ -1,4 +1,7 @@
 const cartBtn = document.querySelectorAll('.agregarBtn');
+const vaciarCart = document.getElementById('vaciarCart');
+
+vaciarCart.addEventListener('click', vaciarCarrito, true);
 
 cartBtn.forEach((element) => {
     element.addEventListener('click', (e) => {
@@ -57,4 +60,11 @@ function registrarProducto() {
             fila.remove();
         })
     })
+}
+
+function vaciarCarrito() {
+    let tbody = document.getElementById('tablebody');
+    while(tbody.hasChildNodes()){
+        tbody.removeChild(tbody.firstChild);
+    }
 }
