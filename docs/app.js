@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const cartBtn = document.querySelectorAll('.agregarBtn');
 const vaciarCart = document.getElementById('vaciarCart');
 

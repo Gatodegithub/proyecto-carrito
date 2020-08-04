@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const hamburguesa = document.querySelector('.navbar-burger');
 const navmenu = document.querySelector('.navbar-menu');
 const botonLogin = document.getElementById('botonLogin'); // Boton iniciar sesion
