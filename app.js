@@ -39,9 +39,22 @@ function imprimirObj(obj) {
     </td>
     <td>
         <span class="icon is-medium">
-            <i class="far fa-trash-alt"></i>
+            <a class="trash"><i class="far fa-trash-alt"></i></a>
         </span>
     </td>`;
 
     tabla.appendChild(fila);
+
+    registrarProducto();
+}
+
+function registrarProducto() {
+    let trash = document.querySelectorAll('.trash');
+    console.log(trash)
+    trash.forEach(element => {
+        element.addEventListener('click', (e) => {
+            let fila = e.currentTarget.parentElement.parentElement.parentElement;
+            fila.remove();
+        })
+    })
 }
