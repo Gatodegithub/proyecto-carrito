@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const hamburguesa = document.querySelector('.navbar-burger');
 const navmenu = document.querySelector('.navbar-menu');
 const botonLogin = document.getElementById('botonLogin'); // Boton iniciar sesion
@@ -13,4 +14,21 @@ function activo() {
     let isTrue = this == botonLogin || this == modalBg || this == modalClose;
 
     isTrue ? modalLogin.classList.toggle('is-active') : hamburguesa.classList.toggle('is-active'),navmenu.classList.toggle('is-active')
+=======
+const hamburguesa = document.querySelector('.navbar-burger');
+const navmenu = document.querySelector('.navbar-menu');
+const botonLogin = document.getElementById('botonLogin'); // Boton iniciar sesion
+const modalLogin = document.getElementById('modalLogin'); // Modal
+const modalBg = document.querySelector('.modal-background'); // BG
+const modalClose = document.querySelector('.modal-close'); // x
+
+[hamburguesa,botonLogin,modalBg,modalClose].forEach(element => {
+    element.addEventListener('click', activo, true);
+})
+
+function activo() {
+    let isTrue = this == botonLogin || this == modalBg || this == modalClose;
+
+    isTrue ? modalLogin.classList.toggle('is-active') : hamburguesa.classList.toggle('is-active'),navmenu.classList.toggle('is-active')
+>>>>>>> 550366efba4cdf6f726d8ee98e8a72fc918f46fd
 }
