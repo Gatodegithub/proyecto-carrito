@@ -63,11 +63,12 @@ table tbody tr {
     color: hsla(340, 95%, 50%,0.3);
 }
 
-.fa-trash-alt {
-    cursor: pointer;
-    margin-top: 10px;
-    margin-left: 16px;
+.trash {
+    display: block;
+    height: 100%;
+    width: 100%;
     font-size: 2em;
+    margin-left: 15px;
 }
 
 .footer {
