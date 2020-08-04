@@ -1,20 +1,16 @@
 const hamburguesa = document.querySelector('.navbar-burger');
 const navmenu = document.querySelector('.navbar-menu');
-const botonLogin = document.getElementById('botonLogin');
-const modalLogin = document.getElementById('modalLogin');
-const modalBg = document.querySelector('.modal-background');
-const modalClose = document.querySelector('.modal-close');
+const botonLogin = document.getElementById('botonLogin'); // Boton iniciar sesion
+const modalLogin = document.getElementById('modalLogin'); // Modal
+const modalBg = document.querySelector('.modal-background'); // BG
+const modalClose = document.querySelector('.modal-close'); // x
 
-hamburguesa.addEventListener('click', activo, true);
-botonLogin.addEventListener('click', modal, true);
-modalBg.addEventListener('click', modal, true);
-modalClose.addEventListener('click', modal, true);
+[hamburguesa,botonLogin,modalBg,modalClose].forEach(element => {
+    element.addEventListener('click', activo, true);
+})
 
-function activo(e) {
-    hamburguesa.classList.toggle('is-active');
-    navmenu.classList.toggle('is-active');
-}
+function activo() {
+    let isTrue = this == botonLogin || this == modalBg || this == modalClose;
 
-function modal() {
-    modalLogin.classList.toggle('is-active');
+    isTrue ? modalLogin.classList.toggle('is-active') : hamburguesa.classList.toggle('is-active'),navmenu.classList.toggle('is-active')
 }

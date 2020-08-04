@@ -1,4 +1,7 @@
 const cartBtn = document.querySelectorAll('.agregarBtn');
+const vaciarCart = document.getElementById('vaciarCart');
+
+vaciarCart.addEventListener('click', vaciarCarrito, true);
 
 cartBtn.forEach((element) => {
     element.addEventListener('click', (e) => {
@@ -39,9 +42,29 @@ function imprimirObj(obj) {
     </td>
     <td>
         <span class="icon is-medium">
-            <i class="far fa-trash-alt"></i>
+            <a class="trash"><i class="far fa-trash-alt"></i></a>
         </span>
     </td>`;
 
     tabla.appendChild(fila);
+
+    registrarProducto();
+}
+
+function registrarProducto() {
+    let trash = document.querySelectorAll('.trash');
+    console.log(trash)
+    trash.forEach(element => {
+        element.addEventListener('click', (e) => {
+            let fila = e.currentTarget.parentElement.parentElement.parentElement;
+            fila.remove();
+        })
+    })
+}
+
+function vaciarCarrito() {
+    let tbody = document.getElementById('tablebody');
+    while(tbody.hasChildNodes()){
+        tbody.removeChild(tbody.firstChild);
+    }
 }
