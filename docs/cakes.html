@@ -152,7 +152,7 @@
         <div class="hero-body">
             <div class="container has-text-centered">
                 <h1 class="title is-1 is-italic">Bienvenidos a Pasteleria Wendy</h1>
-                <div class="dropdown is-hoverable">
+                <div class="dropdown is-active">
                     <div class="dropdown-trigger">
                         <button class="button is-medium" aria-haspopup="true" aria-controls="dropdown-menu2">
                             <span>Carrito</span>
@@ -174,14 +174,19 @@
                                         </tr>
                                     </thead>
 
-                                    <tbody>
+                                    <tbody id="tablebody">
                                         
                                     </tbody>
 
                                     <tfoot>
                                         <tr>
+                                            <td colspan="3">
+                                                Total:
+                                            </td>
+                                        </tr>
+                                        <tr>
                                             <td><a class="button is-small">Comprar</a></td>
-                                            <td><a class="button is-small">Vaciar Carrito</a></td>
+                                            <td><a id="vaciarCart" class="button is-small">Vaciar Carrito</a></td>
                                         </tr>
                                     </tfoot>
                                 </table>
